@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Damaris</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans leading-relaxed">
+  <header class="bg-blue-900 text-white p-4 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Damaris</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="projects/python-mini.html" class="hover:underline">Projects</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8 animate-fadeIn">
+    <h2 class="text-3xl font-bold text-blue-800 mb-6">About Me</h2>
+    <p class="text-gray-700 mb-4">
+      I'm Damaris, a full-stack developer trained at Moringa School with a passion for backend systems and real-world tools. I come from a strong background in client-facing roles and administration, which helps me build software that puts people first.
+    </p>
+
+    <p class="text-gray-700">
+      Currently learning through the Python Crash Course and personal projects like a full restaurant/hotel management system. I'm actively seeking a junior dev or internship opportunity to grow and collaborate with passionate teams.
+    </p>
+  </main>
+
+  <footer class="text-center p-4 text-sm text-gray-500">&copy; 2025 Damaris</footer>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeIn: "fadeIn 1s ease-in-out"
+          },
+          keyframes: {
+            fadeIn: {
+              "0%": { opacity: "0" },
+              "100%": { opacity: "1" }
+            }
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>
