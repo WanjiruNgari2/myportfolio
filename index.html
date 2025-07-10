@@ -23,6 +23,12 @@
       }
     }
   </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px; /* Accounts for fixed navbar */
+    }
+  </style>
 </head>
 <body class="bg-white text-gray-800 font-sans leading-relaxed">
 
@@ -32,10 +38,10 @@
     <div class="flex items-center space-x-4">
       <h1 class="text-2xl font-bold hover:text-yellow-400 transition duration-300 ease-in-out cursor-pointer">Damaris</h1>
       <nav class="flex space-x-3 text-sm">
-        <a href="#about" class="hover:text-yellow-300 transition">About</a>
-        <a href="#projects" class="hover:text-yellow-300 transition">Projects</a>
-        <a href="#skills" class="hover:text-yellow-300 transition">Skills</a>
-        <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+        <a href="#about" class="hover:text-yellow-300 transition" onclick="smoothScroll(event)">About</a>
+        <a href="#projects" class="hover:text-yellow-300 transition" onclick="smoothScroll(event)">Projects</a>
+        <a href="#skills" class="hover:text-yellow-300 transition" onclick="smoothScroll(event)">Skills</a>
+        <a href="#contact" class="hover:text-yellow-300 transition" onclick="smoothScroll(event)">Contact</a>
       </nav>
     </div>
     <div class="flex space-x-4 justify-start sm:justify-end text-sm">
@@ -98,56 +104,57 @@
     </div>
   </section>
 
-<!-- Skills -->
-<section id="skills" class="mt-16">
-  <h3 class="text-2xl font-semibold text-blue-800 mb-4">Skills</h3>
-  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-    <div class="p-4 border rounded-lg shadow text-center">
-      <p class="text-lg font-semibold">Python</p>
-      <p class="text-sm text-gray-600">Backend, scripting, automation</p>
+  <!-- Skills -->
+  <section id="skills" class="mt-16">
+    <h3 class="text-2xl font-semibold text-blue-800 mb-4">Skills</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="p-4 border rounded-lg shadow text-center">
+        <p class="text-lg font-semibold">Python</p>
+        <p class="text-sm text-gray-600">Backend, scripting, automation</p>
+      </div>
+      <div class="p-4 border rounded-lg shadow text-center">
+        <p class="text-lg font-semibold">JavaScript</p>
+        <p class="text-sm text-gray-600">Web apps, frontend logic</p>
+      </div>
+      <div class="p-4 border rounded-lg shadow text-center">
+        <p class="text-lg font-semibold">HTML & CSS</p>
+        <p class="text-sm text-gray-600">Responsive web design</p>
+      </div>
+      <div class="p-4 border rounded-lg shadow text-center">
+        <p class="text-lg font-semibold">Git & GitHub</p>
+        <p class="text-sm text-gray-600">Version control & collaboration</p>
+      </div>
+      <div class="p-4 border rounded-lg shadow text-center">
+        <p class="text-lg font-semibold">Tailwind CSS</p>
+        <p class="text-sm text-gray-600">Utility-first styling</p>
+      </div>
+      <div class="p-4 border rounded-lg shadow text-center">
+        <p class="text-lg font-semibold">SQL</p>
+        <p class="text-sm text-gray-600">Data modeling & queries</p>
+      </div>
+      <div class="p-4 border rounded-lg shadow text-center">
+        <p class="text-lg font-semibold">Flask</p>
+        <p class="text-sm text-gray-600">Lightweight Python web framework</p>
+      </div>
+      <div class="p-4 border rounded-lg shadow text-center">
+        <p class="text-lg font-semibold">REST APIs</p>
+        <p class="text-sm text-gray-600">Data exchange & system integration</p>
+      </div>
+      <div class="p-4 border rounded-lg shadow text-center">
+        <p class="text-lg font-semibold">PostgreSQL</p>
+        <p class="text-sm text-gray-600">Relational database management</p>
+      </div>
+      <div class="p-4 border rounded-lg shadow text-center">
+        <p class="text-lg font-semibold">JSON & Fetch</p>
+        <p class="text-sm text-gray-600">API consumption & frontend data</p>
+      </div>
+      <div class="p-4 border rounded-lg shadow text-center">
+        <p class="text-lg font-semibold">Authentication</p>
+        <p class="text-sm text-gray-600">Secure login, JWT basics</p>
+      </div>
     </div>
-    <div class="p-4 border rounded-lg shadow text-center">
-      <p class="text-lg font-semibold">JavaScript</p>
-      <p class="text-sm text-gray-600">Web apps, frontend logic</p>
-    </div>
-    <div class="p-4 border rounded-lg shadow text-center">
-      <p class="text-lg font-semibold">HTML & CSS</p>
-      <p class="text-sm text-gray-600">Responsive web design</p>
-    </div>
-    <div class="p-4 border rounded-lg shadow text-center">
-      <p class="text-lg font-semibold">Git & GitHub</p>
-      <p class="text-sm text-gray-600">Version control & collaboration</p>
-    </div>
-    <div class="p-4 border rounded-lg shadow text-center">
-      <p class="text-lg font-semibold">Tailwind CSS</p>
-      <p class="text-sm text-gray-600">Utility-first styling</p>
-    </div>
-    <div class="p-4 border rounded-lg shadow text-center">
-      <p class="text-lg font-semibold">SQL</p>
-      <p class="text-sm text-gray-600">Data modeling & queries</p>
-    </div>
-    <div class="p-4 border rounded-lg shadow text-center">
-      <p class="text-lg font-semibold">Flask</p>
-      <p class="text-sm text-gray-600">Lightweight Python web framework</p>
-    </div>
-    <div class="p-4 border rounded-lg shadow text-center">
-      <p class="text-lg font-semibold">REST APIs</p>
-      <p class="text-sm text-gray-600">Data exchange & system integration</p>
-    </div>
-    <div class="p-4 border rounded-lg shadow text-center">
-      <p class="text-lg font-semibold">PostgreSQL</p>
-      <p class="text-sm text-gray-600">Relational database management</p>
-    </div>
-    <div class="p-4 border rounded-lg shadow text-center">
-      <p class="text-lg font-semibold">JSON & Fetch</p>
-      <p class="text-sm text-gray-600">API consumption & frontend data</p>
-    </div>
-    <div class="p-4 border rounded-lg shadow text-center">
-      <p class="text-lg font-semibold">Authentication</p>
-      <p class="text-sm text-gray-600">Secure login, JWT basics</p>
-    </div>
-  </div>
-</section>
+  </section>
+
   <!-- Contact -->
   <section id="contact">
     <h3 class="text-2xl font-semibold text-blue-800 mb-4">Contact Me</h3>
@@ -169,6 +176,29 @@
 </main>
 
 <footer class="text-center text-sm text-gray-500 py-6">&copy; 2025 Damaris</footer>
+
+<script>
+  function smoothScroll(event) {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+    
+    if (targetElement) {
+      // Calculate the position with offset for fixed navbar
+      const navbarHeight = document.querySelector('header').offsetHeight;
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+      
+      // Update URL without jumping
+      history.pushState(null, null, targetId);
+    }
+  }
+</script>
 
 </body>
 </html>
