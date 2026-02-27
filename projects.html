@@ -2,163 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Damaris</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-white text-gray-800 font-sans leading-relaxed">
+<body>
 
-  <!-- Navbar -->
-  <header class="bg-blue-900 text-white p-4 shadow-md sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Projects</h1>
-      <nav class="space-x-4">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="contact.html" class="hover:underline">Contact Me</a>
-      </nav>
-    </div>
-  </header>
-
-<main class="container mx-auto px-4 py-8 animate-fadeIn space-y-12">
-<!-- Mama Africa Project -->
-<section id="mama-africa" class="mt-16">
-  <h2 class="text-3xl font-bold text-blue-800 mb-6">MamaAfrica School Project</h2>
-  <p class="text-gray-700 mt-4">
-    A web app for pregnant moms and health professionals to connect, chat, and get advice. I worked on the admin panel to:
-  </p>
-  <ul class="list-disc list-inside text-gray-700 mb-2">
-    <li>Approve/reject flagged content</li>
-    <li>Manage and verify users</li>
-    <li>View analytics and send notifications</li>
-    <li>Moderate community posts and comments</li>
-  </ul>
-  <div class="flex gap-4">
-    <a href="https://github.com/SirAlvinAmisi/Mama-Africa---Maternity-Companion-for-African-Mums" target="_blank" class="text-blue-600 underline text-sm">GitHub Repo</a>
+<header>
+  <div class="nav-container">
+    <div class="logo">Damaris</div>
+    <button id="hamburger" class="hamburger">☰</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
-  <div class="flex flex-wrap gap-4 justify-center items-center">
-    <div class="overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-[1.6]">
-      <img src="images/mamaafricahome.png" class="max-w-md w-full object-cover" />
-    </div>
-    <div class="overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-[1.6]">
-      <img src="images/mamaafrica (1).jpg" class="max-w-md w-full object-cover" />
-    </div>
-    <div class="overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-[1.6]">
-      <img src="images/mamaafrica (2).jpg" class="max-w-md w-full object-cover" />
-    </div>
-    <div class="overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-[1.6]">
-      <img src="images/mamaafrica (3).jpg" class="max-w-md w-full object-cover" />
-    </div>
-    <div class="overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-[1.6]">
-      <img src="images/mamaafrica (4).jpg" class="max-w-md w-full object-cover" />
-    </div>
-    <div class="overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-[1.6]">
-      <img src="images/communities.png" class="max-w-md w-full object-cover" />
-    </div>
-  </div>
+</header>
 
-</section>
-<!-- Ecommerce Django -->
-<section id="ecommerce-project" class="mt-16">
-  <h2 class="text-3xl font-bold text-blue-800 mb-6">Ecommerce Django App</h2>
-  <p class="text-gray-700 mb-4">
-    A Django ecommerce site with products listed and cart to checkout. 
-    It enables the user to add and delete products while calculating the total amount at the checkout.
-  </p>
-  <div class="flex gap-4 mt-4">
-    <a href="images/Ecommerce cart - Google Chrome 2025-07-10 02-13-40.mp4" target="_blank" class="text-blue-600 underline text-sm hover:text-blue-800 transition-colors">Live Demo</a>
-    <a href="https://github.com/WanjiruNgari2/simpleecommercecart" target="_blank" class="text-blue-600 underline text-sm hover:text-blue-800 transition-colors">GitHub Repo</a>
-  </div>
-  <div class="flex flex-wrap gap-4 justify-center items-center">
-    <div class="overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-[1.6]">
-      <img src="images/cart2.png" alt="Movie App Screenshot 1" class="max-w-md w-full object-cover" />
+<main>
+  <!-- Mama Africa -->
+  <section class="project-section" id="mama-africa">
+    <h2>Mama Africa (School Team Project)</h2>
+    <p>A web app connecting pregnant moms with health professionals for advice and chat. I helped build the admin side:</p>
+    <ul>
+      <li>Approve/reject flagged content</li>
+      <li>Manage and verify users</li>
+      <li>View basic analytics & send notifications</li>
+      <li>Moderate posts and comments</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://github.com/SirAlvinAmisi/Mama-Africa---Maternity-Companion-for-African-Mums" target="_blank">GitHub Repo</a>
     </div>
-    <div class="overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-[1.6]">
-      <img src="images/cart1.png" alt="Movie App Screenshot 2" class="max-w-md w-full object-cover" />
+    <div class="gallery">
+      <img src="images/mamaafricahome.png" alt="Mama Africa Home">
+      <img src="images/mamaafrica (1).jpg" alt="Mama Africa Screen 1">
+      <img src="images/mamaafrica (2).jpg" alt="Mama Africa Screen 2">
+      <img src="images/mamaafrica (3).jpg" alt="Mama Africa Screen 3">
+      <img src="images/mamaafrica (4).jpg" alt="Mama Africa Screen 4">
+      <img src="images/communities.png" alt="Communities Page">
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- Movie Project -->
-<section id="movie-project" class="mt-16">
-  <h2 class="text-3xl font-bold text-blue-800 mb-6">Movie Code Challenge</h2>
-  <p class="text-gray-700 mt-4">
-    A movie ticket CRUD app — users can buy tickets as long as available ones &gt; 0.
-  </p>
-  <div class="flex gap-4 mt-2">
-    <a href="images/movievid.mp4" target="_blank" class="text-blue-600 underline text-sm">Live Demo</a>
-    <a href="https://github.com/WanjiruNgari2/movie-challenge" target="_blank" class="text-blue-600 underline text-sm">GitHub Repo</a>
-  </div>
-  <div class="flex flex-wrap gap-4 justify-center items-center">
-    <div class="overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-[1.6]">
-      <img src="images/movie1.png" alt="Movie App Screenshot 1" class="max-w-md w-full object-cover" />
+  <!-- Ecommerce Django -->
+  <section class="project-section" id="ecommerce-project">
+    <h2>Ecommerce Django App</h2>
+    <p>A simple Django site with product listing, cart, and checkout. Users can add/remove items and see total price.</p>
+    <div class="project-links">
+      <a href="https://github.com/WanjiruNgari2/simpleecommercecart" target="_blank">GitHub Repo</a>
+      <!-- If you deploy it later, add live link here -->
     </div>
-    <div class="overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-[1.6]">
-      <img src="images/movie2.png" alt="Movie App Screenshot 2" class="max-w-md w-full object-cover" />
+    <div class="gallery">
+      <img src="images/cart2.png" alt="Cart View">
+      <img src="images/cart1.png" alt="Products Page">
     </div>
-    <div class="overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-[1.6]">
-      <img src="images/movie3.png" alt="Movie App Screenshot 3" class="max-w-md w-full object-cover" />
+  </section>
+
+  <!-- Movie Challenge -->
+  <section class="project-section" id="movie-project">
+    <h2>Movie Ticket Code Challenge</h2>
+    <p>CRUD app for buying movie tickets — only sells if tickets available > 0.</p>
+    <div class="project-links">
+      <a href="https://github.com/WanjiruNgari2/movie-challenge" target="_blank">GitHub Repo</a>
+      <!-- Video demo link if you want to keep: -->
+      <!-- <a href="images/movievid.mp4" target="_blank">Watch Demo Video</a> -->
     </div>
-  </div>
+    <div class="gallery">
+      <img src="images/movie1.png" alt="Movie App Screen 1">
+      <img src="images/movie2.png" alt="Movie App Screen 2">
+      <img src="images/movie3.png" alt="Movie App Screen 3">
+    </div>
+  </section>
 
-</section>
+  <!-- Python Mini Projects -->
+  <section class="project-section" id="python-mini-projects">
+    <h2>Python Mini Projects (CLI)</h2>
+    <p>Small command-line tools from Python learning:</p>
+    <div class="mini-projects-grid">
+      <div class="mini-project">
+        <h3>1. Daily Affirmations</h3>
+        <p>CLI tool that prints a new positive affirmation each run.</p>
+        <a href="https://github.com/WanjiruNgari2/python-crash-course-mini-projects/blob/main/affirmations/affirmations.py" target="_blank">View on GitHub</a>
+        <img src="images/affirmations.png" alt="Affirmations Output">
+      </div>
 
-<!-- Python Mini Projects -->
-<section id="python-mini-projects" class="mt-16">
-  <h2 class="text-3xl font-bold text-blue-800 mb-6">Python Mini Projects</h2>
+      <div class="mini-project">
+        <h3>2. Simple Calculator</h3>
+        <p>Basic CLI calculator for addition, subtraction, etc.</p>
+        <a href="https://github.com/WanjiruNgari2/python-crash-course-mini-projects/blob/main/calculator/calculator.py" target="_blank">View on GitHub</a>
+        <img src="images/calculator.png" alt="Calculator Output">
+      </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    
-    <!-- Project 1 -->
-    <div class="border p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]">
-      <h3 class="text-xl font-semibold mb-2">1. Daily Affirmations CLI</h3>
-      <p class="text-gray-700 text-sm mb-2">
-        A CLI app that shows a new positive affirmation each time it runs.
-      </p>
-      <a href="https://github.com/WanjiruNgari2/python-crash-course-mini-projects/blob/main/affirmations/affirmations.py"
-         target="_blank" class="text-blue-600 underline text-sm">View on GitHub</a>
-      <div class="overflow-hidden mt-4 rounded-lg">
-        <img src="images/affirmations.png" alt="Affirmations Screenshot"
-             class="rounded-lg shadow transform transition-transform duration-300 hover:scale-[1.6] w-full h-48 object-cover" />
+      <div class="mini-project">
+        <h3>3. Rock Paper Scissors</h3>
+        <p>Terminal game against the computer.</p>
+        <a href="https://github.com/WanjiruNgari2/python-crash-course-mini-projects/blob/main/rockpaperscissors/rps.py" target="_blank">View on GitHub</a>
+        <img src="images/rockpapergame.png" alt="Rock Paper Scissors Game">
       </div>
     </div>
-
-    <!-- Project 2 -->
-    <div class="border p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]">
-      <h3 class="text-xl font-semibold mb-2">2. Simple Calculator</h3>
-      <p class="text-gray-700 text-sm mb-2">
-        A basic CLI calculator that handles arithmetic operations based on user input.
-      </p>
-      <a href="https://github.com/WanjiruNgari2/python-crash-course-mini-projects/blob/main/calculator/calculator.py"
-         target="_blank" class="text-blue-600 underline text-sm">View on GitHub</a>
-      <div class="overflow-hidden mt-4 rounded-lg">
-        <img src="images/calculator.png" alt="Calculator Screenshot"
-             class="rounded-lg shadow transform transition-transform duration-300 hover:scale-[1.6] w-full h-48 object-cover" />
-      </div>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="border p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]">
-      <h3 class="text-xl font-semibold mb-2">3. Rock Paper Scissors</h3>
-      <p class="text-gray-700 text-sm mb-2">
-        A fun terminal-based game where you challenge the computer.
-      </p>
-      <a href="https://github.com/WanjiruNgari2/python-crash-course-mini-projects/blob/main/rockpaperscissors/rps.py"
-         target="_blank" class="text-blue-600 underline text-sm">View on GitHub</a>
-      <div class="overflow-hidden mt-4 rounded-lg">
-        <img src="images/rockpapergame.png" alt="Rock Paper Scissors Screenshot"
-             class="rounded-lg shadow transform transition-transform duration-300 hover:scale-[1.6] w-full h-48 object-cover" />
-      </div>
-    </div>
-
-  </div>
-</section>
+  </section>
 </main>
+
+<footer>
+  © 2026 Damaris — made with HTML, CSS & a bit of JS
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
-

@@ -1,204 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101f3c">
   <title>Damaris | Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          animation: {
-            fadeIn: "fadeIn 1s ease-in-out",
-            bounceSlow: "bounce 3s infinite"
-          },
-          keyframes: {
-            fadeIn: {
-              "0%": { opacity: "0" },
-              "100%": { opacity: "1" }
-            }
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 80px; /* Accounts for fixed navbar */
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-white text-gray-800 font-sans leading-relaxed">
 
-<!-- Navbar with Icons, Two Rows, Hover Effects -->
-<header class="bg-blue-900 text-white shadow-md sticky top-0 z-50 animate-fadeIn">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
-    <div class="flex items-center space-x-4">
-      <h1 class="text-2xl font-bold hover:text-yellow-400 transition duration-300 ease-in-out cursor-pointer">Damaris</h1>
-      <nav class="flex space-x-3 text-sm">
-        <a href="#about" class="hover:text-yellow-300 transition" onclick="smoothScroll(event)">About</a>
-        <a href="#projects" class="hover:text-yellow-300 transition" onclick="smoothScroll(event)">Projects</a>
-        <a href="#skills" class="hover:text-yellow-300 transition" onclick="smoothScroll(event)">Skills</a>
-        <a href="#contact" class="hover:text-yellow-300 transition" onclick="smoothScroll(event)">Contact</a>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo">Damaris</div>
+      <button id="hamburger" class="hamburger">☰</button>
+      <nav>
+        <a href="#about" onclick="smoothScroll(event)">About</a>
+        <a href="#projects" onclick="smoothScroll(event)">Projects</a>
+        <a href="#skills" onclick="smoothScroll(event)">Skills</a>
+        <a href="#contact" onclick="smoothScroll(event)">Contact</a>
       </nav>
     </div>
-    <div class="flex space-x-4 justify-start sm:justify-end text-sm">
-      <a href="https://www.linkedin.com/in/damaris-ngari-6b1870199/" target="_blank" class="hover:text-yellow-300 transition" title="LinkedIn">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v5.74z"/></svg>
-      </a>
-      <a href="https://github.com/WanjiruNgari2" target="_blank" class="hover:text-yellow-300 transition" title="GitHub">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.01c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.8 1.09.8 2.2v3.26c0 .31.21.67.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/></svg>
-      </a>
-      <a href="files/resume.pdf" download class="underline hover:text-yellow-300 transition" title="Resume">Resume</a>
-    </div>
-  </div>
-</header>
+  </header>
 
-<main class="max-w-7xl mx-auto px-6 py-12 space-y-20">
-  <!-- Hero -->
-  <section class="text-center animate-fadeIn">
-    <h2 class="text-4xl font-bold text-blue-900 mb-2">Hi, I'm Damaris 👋</h2>
-    <p class="text-lg text-gray-700">Full-stack Software Developer</p>
-  </section>
+  <main>
+    <section class="hero">
+      <h1>Hi, I'm Damaris</h1>
+      <img src="images/damaProfile.jpg" alt="Damaris"
+        style="max-width: 250px; border-radius: 50%; margin: 1.5rem auto; display: block; border: 4px solid #2dd4bf;">
 
-  <!-- About -->
-  <section id="about">
-    <h3 class="text-2xl font-semibold text-blue-800 mb-4">About Me</h3>
-    <p class="text-gray-700 leading-relaxed mb-2">
-      I'm Damaris, a full-stack developer trained at Moringa School with a passion for backend systems and real-world tools. I come from a strong background in client-facing roles and administration, which helps me build software that puts people first.
-    </p>
-    <p class="text-gray-700 leading-relaxed">
-      Currently learning through the Python Crash Course and personal projects like a full restaurant/hotel management system. I'm actively seeking a junior dev or internship opportunity to grow and collaborate with passionate teams.
-    </p>
-  </section>
+    </section>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h3 class="text-2xl font-semibold text-blue-800 mb-4">Projects</h3>
-    <p class="text-sm text-gray-600 mb-6">Explore some of my recent work.</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Example Project Card -->
-      <a href="projects.html#mama-africa" class="border rounded-lg shadow hover:shadow-md transition overflow-hidden">
-        <img src="images/mamaafrica (5).jpg" alt="Mama Africa" class="h-48 w-full object-cover" />
-        <div class="p-4">
-          <h4 class="font-semibold text-blue-900">Mama Africa</h4>
-          <p class="text-xs text-gray-600">A community health platform for moms and pros.</p>
-        </div>
-      </a>
-      <a href="projects.html#python-mini-projects" class="border rounded-lg shadow hover:shadow-md transition overflow-hidden">
-        <img src="images/affirmations.png" alt="Python Minis" class="h-48 w-full object-cover" />
-        <div class="p-4">
-          <h4 class="font-semibold text-blue-900">Python Mini Projects</h4>
-          <p class="text-xs text-gray-600">Simple CLI games and utilities in Python.</p>
-        </div>
-      </a>
-      <a href="projects.html#movie-project" class="border rounded-lg shadow hover:shadow-md transition overflow-hidden">
-        <img src="images/movie1.png" alt="Movie Challenge" class="h-48 w-full object-cover" />
-        <div class="p-4">
-          <h4 class="font-semibold text-blue-900">Movie Challenge</h4>
-          <p class="text-xs text-gray-600">CRUD app for buying movie tickets online.</p>
-        </div>
-      </a>
-    </div>
-  </section>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Full-stack developer (mostly learning backend with JavaScript right now)</p>
+      <p>I studied full-stack development at Moringa School. Before that I worked in client-facing and admin roles, so I
+        like building tools that actually help people.</p>
+      <p>Right now I'm doing Javascript projects and learning more about web apps. Looking for junior dev / internship
+        roles to keep growing.</p>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills" class="mt-16">
-    <h3 class="text-2xl font-semibold text-blue-800 mb-4">Skills</h3>
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-      <div class="p-4 border rounded-lg shadow text-center">
-        <p class="text-lg font-semibold">Python</p>
-        <p class="text-sm text-gray-600">Backend, scripting, automation</p>
-      </div>
-      <div class="p-4 border rounded-lg shadow text-center">
-        <p class="text-lg font-semibold">JavaScript</p>
-        <p class="text-sm text-gray-600">Web apps, frontend logic</p>
-      </div>
-      <div class="p-4 border rounded-lg shadow text-center">
-        <p class="text-lg font-semibold">HTML & CSS</p>
-        <p class="text-sm text-gray-600">Responsive web design</p>
-      </div>
-      <div class="p-4 border rounded-lg shadow text-center">
-        <p class="text-lg font-semibold">Git & GitHub</p>
-        <p class="text-sm text-gray-600">Version control & collaboration</p>
-      </div>
-      <div class="p-4 border rounded-lg shadow text-center">
-        <p class="text-lg font-semibold">Tailwind CSS</p>
-        <p class="text-sm text-gray-600">Utility-first styling</p>
-      </div>
-      <div class="p-4 border rounded-lg shadow text-center">
-        <p class="text-lg font-semibold">SQL</p>
-        <p class="text-sm text-gray-600">Data modeling & queries</p>
-      </div>
-      <div class="p-4 border rounded-lg shadow text-center">
-        <p class="text-lg font-semibold">Flask</p>
-        <p class="text-sm text-gray-600">Lightweight Python web framework</p>
-      </div>
-      <div class="p-4 border rounded-lg shadow text-center">
-        <p class="text-lg font-semibold">REST APIs</p>
-        <p class="text-sm text-gray-600">Data exchange & system integration</p>
-      </div>
-      <div class="p-4 border rounded-lg shadow text-center">
-        <p class="text-lg font-semibold">PostgreSQL</p>
-        <p class="text-sm text-gray-600">Relational database management</p>
-      </div>
-      <div class="p-4 border rounded-lg shadow text-center">
-        <p class="text-lg font-semibold">JSON & Fetch</p>
-        <p class="text-sm text-gray-600">API consumption & frontend data</p>
-      </div>
-      <div class="p-4 border rounded-lg shadow text-center">
-        <p class="text-lg font-semibold">Authentication</p>
-        <p class="text-sm text-gray-600">Secure login, JWT basics</p>
-      </div>
-    </div>
-  </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Here are a few things I've worked on (mostly school + personal learning):</p>
+      <div class="project-grid">
+        <a href="https://github.com/WanjiruNgari2/JavaScript-with-Per-Scrimba" target="_blank" class="project-card">
+          <div class="content">
+            <video width="100%" controls>
+              <source src="images/scrimbademo.mp4" type="video/mp4" loading="lazy">
+              live demo
+            </video>
+            <h3>JavaScript Learning</h3>
+            <p>This github links contains lots of follow along projects from Scrimba and youtube mentors. </p>
+          </div>
+        </a>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h3 class="text-2xl font-semibold text-blue-800 mb-4">Contact Me</h3>
-    <div class="grid md:grid-cols-2 gap-8">
-      <form action="mailto:wanjirungari2@gmail.com" method="POST" enctype="text/plain" class="space-y-4">
-        <input type="text" name="name" placeholder="Your Name" required class="w-full border px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
-        <input type="email" name="email" placeholder="Your Email" required class="w-full border px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
-        <textarea name="message" rows="4" placeholder="Your Message" required class="w-full border px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
-        <button type="submit" class="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-900">Send</button>
+
+        <a href="https://flowdesk-9ebxh98cf-damaris-projects-68c92c9e.vercel.app/" target="_blank" class="project-card">
+          <div class="content">
+            <video width="100%" controls>
+              <source src="images/flowdeskDemo.mp4" type="video/mp4" loading="lazy">
+                loading Demo
+            </video>
+            <h3>Flowdesk</h3>
+            <p>Simple JavaScript tool to connect clients and their tasks.</p>
+          </div>
+        </a>
+
+
+
+
+        <a href="https://github.com/WanjiruNgari2/Mama-Africa---Maternity-Companion-for-African-Mums" target="_blank"
+          class="project-card">
+          <div class="content">
+            <img src="images/mamaafricahome.png" alt="Mama Africa screenshot" loading="lazy">
+            <h3>Mama Africa</h3>
+            <p>Team project at Moringa — community health platform for mothers (JavaScript frontend).</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript (ES6+)</div>
+        <div class="skill">Python</div>
+        <div class="skill">Responsive Design</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">Flask</div>
+        <div class="skill">REST APIs & Fetch</div>
+        <div class="skill">SQL Basics</div>
+        <div class="skill">PostgreSQL</div>
+        <div class="skill">DOM Manipulation</div>
+        <div class="skill">Local Storage</div>
+        <div class="skill">Debugging (DevTools)</div>
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form action="mailto:wanjirungari2@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
       </form>
 
-      <ul class="space-y-4 text-gray-700">
-        <li><strong>Email:</strong> <a href="mailto:wanjirungari2@gmail.com" class="text-blue-600 underline">wanjirungari2@gmail.com</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/WanjiruNgari2" class="text-blue-600 underline" target="_blank">github.com/WanjiruNgari2</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/damaris-ngari-6b1870199/" class="text-blue-600 underline" target="_blank">linkedin.com/in/damaris-ngari</a></li>
-      </ul>
-    </div>
-  </section>
-</main>
+      <div class="contact-card">
+        <h3>Let's Connect</h3>
+        <ul class="contact-links">
+          <li>
+            <span class="icon">✉️</span>
+            <a href="mailto:wanjirungari2@gmail.com">wanjirungari2@gmail.com</a>
+          </li>
+          <li>
+            <span class="icon">🐱</span>
+            <a href="https://github.com/WanjiruNgari2" target="_blank" rel="noopener noreferrer">
+              github.com/WanjiruNgari2
+            </a>
+          </li>
+          <li>
+            <span class="icon">🔗</span>
+            <a href="https://www.linkedin.com/in/damaris-ngari-6b1870199/" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/damaris-ngari
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-<footer class="text-center text-sm text-gray-500 py-6">&copy; 2025 Damaris</footer>
+  <footer>
+    © 2026 Damaris — made with HTML, CSS & a bit of JS
+  </footer>
 
-<script>
-  function smoothScroll(event) {
-    event.preventDefault();
-    const targetId = event.currentTarget.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
-    
-    if (targetElement) {
-      // Calculate the position with offset for fixed navbar
-      const navbarHeight = document.querySelector('header').offsetHeight;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-      
-      // Update URL without jumping
-      history.pushState(null, null, targetId);
-    }
-  }
-</script>
+  <script src="script.js"></script>
 
 </body>
+
 </html>
