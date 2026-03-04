@@ -1,9 +1,14 @@
-function Projects () {
-    return(
-            <section id="projects">
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
+
+function Projects() {
+  const ref = useScrollAnimation();
+
+
+  return (
+    <section id="projects" ref={ref} className="animate-on-scroll" >
       <h2>Projects</h2>
-      <p>Here are a few things I've worked on (mostly school + personal learning):</p>
-      <div className="project-grid">
+      <p style={{ '--delay': '0.2s' }} >Here are a few things I've worked on (mostly school + personal learning):</p>
+      <div className="project-grid"  style={{ '--delay': '0.2s' }}>
         <a href="https://github.com/WanjiruNgari2/JavaScript-with-Per-Scrimba" target="_blank" className="project-card">
           <div className="content">
             JavaScript Learning
@@ -11,9 +16,9 @@ function Projects () {
               <source src="/images/scrimbademo.mp4" type="video/mp4" loading="lazy" />
               live demo
             </video>
-            
+
             <h3></h3>
-            <p>This github links contains lots of follow along projects from Scrimba and youtube mentors.   </p>
+            <p >This github links contains lots of follow along projects from Scrimba and youtube mentors.   </p>
             <p>Projects inludes a people counting app, color flipper, blackjack game, chrome extensions among others.</p>
           </div>
         </a>
@@ -23,7 +28,7 @@ function Projects () {
           <div className="content">
             <video width="100%" controls>
               <source src="/images/flowdeskDemo.mp4" type="video/mp4" loading="lazy" />
-                loading Demo
+              loading Demo
             </video>
             <h3>Flowdesk</h3>
             <p> JavaScript tool to connect clients and their tasks.Tasks are automatically and manually added to clients</p>
@@ -46,7 +51,7 @@ function Projects () {
       </div>
     </section>
 
-    );
+  );
 }
 
 export default Projects;

@@ -1,8 +1,16 @@
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
+
+
 function Skills() {
+    const ref = useScrollAnimation();
+
+
+
+
     return (
-        <section id="skills">
+        <section id="skills" ref={ref} className="animate-on-scroll">
             <h2>Skills</h2>
-            <div className="skills-grid">
+            <div className="skills-grid" style={{ '--delay': '0.2s' }}>
 
                 <div className="skill">HTML5</div>
                 <div className="skill">CSS3</div>
