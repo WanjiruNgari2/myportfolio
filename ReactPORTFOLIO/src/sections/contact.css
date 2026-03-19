@@ -1,0 +1,254 @@
+/* Contact Section */
+#contact {
+    padding: 4rem 1rem;
+    background: #101f3c;
+}
+
+#contact h2 {
+    text-align: center;
+    color: #2dd4bf;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Info Section (the one you left empty) */
+.contact-info {
+    background: #1e293b;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    margin-bottom: 2rem;
+    min-height: 100px; /* Temporary until you add content */
+}
+
+/* Form Container */
+.contact-form-container {
+    background: #1e293b;
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 3rem;
+}
+
+.contact-form-container h3 {
+    color: #2dd4bf;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background: #0f172a;
+    border: 2px solid #334155;
+    border-radius: 10px;
+    color: #e0e0e0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2dd4bf;
+    box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #64748b;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: linear-gradient(135deg, #2dd4bf, #0891b2);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    margin: 1rem auto 0;
+    display: block;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Success Message */
+.success-message {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #0f172a;
+    border-radius: 12px;
+    border: 1px solid #2dd4bf;
+}
+
+.success-message h4 {
+    color: #2dd4bf;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.success-message p {
+    color: #94a3b8;
+}
+
+/* Contact Links Section (your social icons) */
+#contact > div:last-child {
+    text-align: center;
+    padding: 2rem;
+    background: #1e293b;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#contact > div:last-child h3 {
+    color: #2dd4bf;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-links li {
+    margin: 0;
+}
+
+.contact-links a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.contact-links a:hover {
+    transform: translateY(-5px);
+}
+
+.social-icon {
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f97316;
+}
+
+/* Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition-delay: var(--delay, 0s);
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-form-container {
+        padding: 1.8rem;
+    }
+    
+    .contact-form-container h3 {
+        font-size: 1.5rem;
+    }
+    
+    .submit-btn {
+        max-width: 100%;
+    }
+    
+    .contact-links {
+        gap: 1.5rem;
+    }
+    
+    .contact-links a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact {
+        padding: 3rem 1rem;
+    }
+    
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem;
+    }
+    
+    .contact-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+
+.info-details {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #334155;
+}
+
+.info-details p {
+    color: #94a3b8;
+    margin: 0.5rem 0;
+}
+
+.info-details strong {
+    color: #2dd4bf;
+}

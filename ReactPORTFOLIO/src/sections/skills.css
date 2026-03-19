@@ -1,0 +1,151 @@
+#skills {
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #e0e0e0;
+    padding: 2rem;  /* Increased padding */
+    text-align: center;
+    border-radius: 6px;
+}
+
+#skills h2 {
+    color: #2dd4bf;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 2rem;  /* Increased gap */
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.skill-ring {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: var(--delay, 0s);
+}
+
+.skill-ring.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-ring p {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #94a3b8;
+}
+
+.ring {
+    width: 120px;  /* Slightly larger */
+    height: 120px;  /* Slightly larger */
+    margin: 0 auto;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 0deg,
+        #2dd4bf 0deg,
+        #2dd4bf calc(var(--progress, 0) * 3.6deg),
+        #334155 calc(var(--progress, 0) * 3.6deg) 360deg
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(45, 212, 191, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.ring::before {
+    content: '';
+    width: 90px;  /* Adjusted for better proportion */
+    height: 90px;  /* Adjusted for better proportion */
+    background: #1e293b;  /* FIXED: Changed from transparent to match section background */
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.ring span {
+    color: #2dd4bf;
+    font-weight: bold;
+    font-size: 1.4rem;
+    z-index: 1;
+    position: relative;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.skill-ring:hover .ring {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px #f97316;
+}
+
+.skill-ring:hover .ring span {
+    color:  #f97316;
+}
+
+.skill-ring:hover p {
+    color: #f97316;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Remove this conflicting rule */
+/* .animate-on-scroll {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+} */
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .ring {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .ring::before {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .ring span {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .ring {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .ring::before {
+        width: 68px;
+        height: 68px;
+    }
+}

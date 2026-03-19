@@ -1,0 +1,162 @@
+.about-section {
+    padding: 5rem 1rem;
+    background: #101f3c;
+}
+
+.about-section h2 {
+    text-align: center;
+    color: #2dd4bf;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Text Content */
+.about-text {
+    background: #1e293b;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-text .lead {
+    font-size: 1.3rem;
+    color: #2dd4bf;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+    border-left: 4px solid #f97316;
+    padding-left: 1.2rem;
+}
+
+.about-text p {
+    color: #94a3b8;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.open-to {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.open-to li {
+    color: #e0e0e0;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    background: #0f172a;
+    border-radius: 10px;
+    border-left: 3px solid #f97316;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.open-to li:hover {
+    transform: translateX(10px);
+    border-left-color: #2dd4bf;
+}
+
+/* Highlights Cards */
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.highlight-card {
+    background: #1e293b;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    border: 1px solid #334155;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px);
+    border-color: #2dd4bf;
+    box-shadow: 0 20px 30px rgba(45, 212, 191, 0.15);
+}
+
+.highlight-icon {
+    font-size: 2.5rem;
+    color: #2dd4bf;
+    margin-bottom: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.highlight-card:hover .highlight-icon {
+    color: #f97316;
+}
+
+.highlight-card h3 {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.highlight-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section h2 {
+        font-size: 2rem;
+    }
+    
+    .about-text {
+        padding: 1.8rem;
+    }
+    
+    .about-text .lead {
+        font-size: 1.2rem;
+    }
+    
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+    
+    .highlight-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 3rem 1rem;
+    }
+    
+    .open-to li {
+        font-size: 0.95rem;
+        padding: 0.7rem;
+    }
+}
