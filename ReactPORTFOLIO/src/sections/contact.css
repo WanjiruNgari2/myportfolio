@@ -16,14 +16,14 @@
     margin: 0 auto;
 }
 
-/* Contact Info Section (the one you left empty) */
+/* Contact Info Section 
 .contact-info {
     background: #1e293b;
     padding: 2rem;
     border-radius: 12px;
     border: 1px solid #334155;
     margin-bottom: 2rem;
-    min-height: 100px; /* Temporary until you add content */
+    min-height: 100px; 
 }
 
 /* Form Container */
