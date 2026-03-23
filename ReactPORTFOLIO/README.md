@@ -14,4 +14,4 @@ This is a personal portfolio site built using HTML and Tailwind CSS to showcase 
 - Git + GitHub
 
 ## Live Site
-👉 [Your GitHub Pages URL here]
+ [https://wanjirungari2.github.io/myportfolio/]
