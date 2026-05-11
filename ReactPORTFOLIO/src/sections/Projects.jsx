@@ -1,7 +1,7 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import historyPng from "../assets/images/history.png";
 import flowdesk from "../assets/images/flowdeskDemo.mp4";
-import productScraperImg from "../assets/images/Screenshot (153).png   
+import productScraperImg from "../assets/images/Screenshot(153).png";
 
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import './projects.css';
