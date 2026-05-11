@@ -6,7 +6,7 @@ import './navbar.css';
 // const resumePath = '/cv.pdf';
 
 // Option 2: If resume is in src/assets/files/
-import resumePath from '../assets/files/cv.pdf';
+import resumePath from '../assets/files/fullCv.pdf';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
