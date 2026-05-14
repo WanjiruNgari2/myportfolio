@@ -23,8 +23,8 @@ function Projects() {
       title: "Currency Converter",
       description: "A simple, responsive currency converter that fetches real-time exchange rates and keeps conversion history.",
       image: historyPng,
-      liveLink: "https://wanjirungari2.github.io/redian-intvw/",
-      githubLink: "https://github.com/WanjiruNgari2/redian-intvw",
+      liveLink: "https://wanjirungari2.github.io/currency-converter/",
+      githubLink: "https://github.com/WanjiruNgari2/currency-converter",
       tags: ["HTML", "CSS", "JavaScript", "API"],
       type: "image"
     },
