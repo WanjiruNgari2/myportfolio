@@ -14,7 +14,7 @@ function Projects() {
       title: "Product Scraper",
       description: "A full-stack web scraping solution that extracts product data from Jumia. Features a REST API, automated scraping with Puppeteer, data persistence in Neon PostgreSQL, and a clean analytics dashboard with CSV export.",
       image: productScraperImg,
-      liveLink: "https://jumia-scraper-dv1d.onrender.com",
+      liveLink: "https://jumia-scrapper-dv1d.onrender.com/",
       githubLink: "https://github.com/WanjiruNgari2/product-scrapper",
       tags: ["Node.js", "Express", "Puppeteer", "PostgreSQL", "REST API", "Dashboard"],
       type: "image"
