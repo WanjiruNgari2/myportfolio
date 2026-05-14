@@ -1,7 +1,7 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import historyPng from "../assets/images/history.png";
 import flowdesk from "../assets/images/flowdeskDemo.mp4";
-import productScraperImg from "../assets/images/product-scrapper.png";   // ← New import
+import productScraperImg from "../assets/images/product-scrapper.png";
 
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import './projects.css';
@@ -14,7 +14,7 @@ function Projects() {
       title: "Product Scraper",
       description: "A full-stack web scraping solution that extracts product data from Jumia. Features a REST API, automated scraping with Puppeteer, data persistence in Neon PostgreSQL, and a clean analytics dashboard with CSV export.",
       image: productScraperImg,
-      liveLink: "https://jumia-scraper-dv1d.onrender.com",   // ← Confirmed from your screenshot
+      liveLink: "https://jumia-scraper-dv1d.onrender.com",
       githubLink: "https://github.com/WanjiruNgari2/product-scrapper",
       tags: ["Node.js", "Express", "Puppeteer", "PostgreSQL", "REST API", "Dashboard"],
       type: "image"
